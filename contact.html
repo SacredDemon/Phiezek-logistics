@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get a Quote | Phiezek Logistics</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">Phiezek <span>Logistic Services</span></a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="track.html" class="btn btn-red">Track Package</a>
+    <button class="hamburger">&#9776;</button>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="hero-bg-word">QUOTE</div>
+  <div class="container">
+    <span class="eyebrow" style="color:rgba(255,255,255,.4);">Get in touch</span>
+    <h1>Let us figure out<br>your shipment.</h1>
+    <p>Fill out the form and we will respond within 2 hours with a competitive rate.</p>
+  </div>
+</header>
+
+<!-- CONTACT + FORM -->
+<section class="section-pad bg-off">
+  <div class="container">
+    <div class="grid-2">
+      <!-- Info -->
+      <div>
+        <span class="eyebrow">Contact info</span>
+        <h2>Talk to a real<br>person.</h2>
+        <p style="margin-bottom:32px;">We are available on WhatsApp, phone, and email. No bots. No long hold times. Just a team that picks up.</p>
+        <div class="card">
+          <div class="contact-item">
+            <div class="contact-icon">&#9679;</div>
+            <div><h4>Visit our office</h4><p>15 Warehouse Road, Ikeja, Lagos, Nigeria</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">&#9742;</div>
+            <div><h4>Call us</h4><p>+234 800 123 4567<br>+234 800 765 4321</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">@</div>
+            <div><h4>Email us</h4><p>hello@phiezek.com<br>support@phiezek.com</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" style="background:#D1FAE5;color:#059669;">W</div>
+            <div><h4>WhatsApp</h4><p>+234 800 123 4567 (fastest response)</p></div>
+          </div>
+        </div>
+        <div class="card" style="margin-top:16px;">
+          <h4 style="font-family:'Syne',sans-serif;color:var(--ink);margin-bottom:14px;">Office hours</h4>
+          <div style="display:grid;gap:8px;">
+            <div style="display:flex;justify-content:space-between;font-size:.85rem;"><span style="color:var(--muted);">Monday to Friday</span><strong>8am to 6pm</strong></div>
+            <div style="display:flex;justify-content:space-between;font-size:.85rem;"><span style="color:var(--muted);">Saturday</span><strong>9am to 4pm</strong></div>
+            <div style="display:flex;justify-content:space-between;font-size:.85rem;"><span style="color:var(--muted);">Sunday</span><strong>Closed</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="form-card reveal" style="background:var(--white);">
+        <div class="form-title">Request a quote</div>
+        <form id="quoteForm">
+          <div class="fg"><label>Full name</label><input type="text" placeholder="Your name" required></div>
+          <div class="fg"><label>Email address</label><input type="email" placeholder="you@example.com" required></div>
+          <div class="fg"><label>Phone number</label><input type="tel" placeholder="+234 800 000 0000" required></div>
+          <div class="form-row">
+            <div class="fg"><label>Origin</label>
+              <select required>
+                <option value="">Select city</option>
+                <option>Lagos</option><option>Abuja</option><option>Port Harcourt</option><option>Other</option>
+              </select>
+            </div>
+            <div class="fg"><label>Destination</label>
+              <select required>
+                <option value="">Select country</option>
+                <option>United Kingdom</option><option>United States</option><option>Canada</option><option>UAE / Dubai</option><option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="fg"><label>Shipping method</label>
+              <select required>
+                <option value="">Select method</option>
+                <option>Air Freight</option><option>Sea Freight</option><option>Express Parcel</option><option>Not sure</option>
+              </select>
+            </div>
+            <div class="fg"><label>Weight (kg)</label><input type="number" placeholder="e.g. 5" required></div>
+          </div>
+          <div class="fg"><label>Package contents</label><textarea rows="3" placeholder="Describe what you are shipping" required></textarea></div>
+          <button type="submit" class="form-submit">Submit request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-pad bg-white">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <h2 style="margin-bottom:40px;">Questions we<br>get asked a lot.</h2>
+    <div style="max-width:700px;">
+      <div class="faq-item">
+        <div class="faq-q">How long does shipping take? <span class="toggle">+</span></div>
+        <div class="faq-a"><p>Air freight takes 3 to 5 working days. Sea freight takes 4 to 6 weeks depending on destination and customs clearance at both ends.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you handle customs clearance? <span class="toggle">+</span></div>
+        <div class="faq-a"><p>Yes, we handle all export and import documentation. Your recipient will not need to deal with customs on their end.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Are packages insured? <span class="toggle">+</span></div>
+        <div class="faq-a"><p>All shipments are insured against loss or damage. Additional insurance is available for high-value items on request.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I track my package? <span class="toggle">+</span></div>
+        <div class="faq-a"><p>Yes. You receive a tracking number the moment your shipment is booked, and can monitor it in real-time on our track page.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What payment methods do you accept? <span class="toggle">+</span></div>
+        <div class="faq-a"><p>We accept bank transfer, card payment, and cash for walk-in customers. Payment is confirmed before pickup.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you pick up from my location? <span class="toggle">+</span></div>
+        <div class="faq-a"><p>Yes, we offer door-to-door pickup in Lagos and Abuja. For other cities, contact us and we will arrange the best option.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="container">
+    <h2>Still have questions?</h2>
+    <p>Send us a message on WhatsApp. We respond fast.</p>
+    <a href="https://wa.me/2348000000000" class="btn btn-red">Chat on WhatsApp</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo">Phiezek <span>Logistic Services</span></a>
+        <p class="desc">Shipping Nigerian goods to the world since day one.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="track.html">Track shipment</a></li>
+          <li><a href="contact.html">Get a quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>15 Warehouse Road, Ikeja, Lagos</p>
+        <p>+234 800 000 0000</p>
+        <p>hello@phiezek.com</p>
+        <a href="https://wa.me/2348000000000" class="whatsapp-btn" style="margin-top:14px;">Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>2024 Phiezek Logistic Services. All rights reserved.</p></div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

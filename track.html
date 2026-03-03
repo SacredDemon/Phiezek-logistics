@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track Shipment | Phiezek Logistics</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">Phiezek <span>Logistic Services</span></a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="track.html" class="btn btn-red">Track Package</a>
+    <button class="hamburger">&#9776;</button>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="hero-bg-word">TRACK</div>
+  <div class="container">
+    <span class="eyebrow" style="color:rgba(255,255,255,.4);">Shipment tracker</span>
+    <h1>Where is your<br>package right now?</h1>
+    <p>Enter your Phiezek tracking number for live updates on your shipment.</p>
+  </div>
+</header>
+
+<section class="section-pad bg-off">
+  <div class="container">
+    <div class="track-box reveal">
+      <h3 style="font-family:'Syne',sans-serif;color:var(--ink);margin-bottom:6px;">Enter your tracking number</h3>
+      <p style="margin-bottom:24px;font-size:.85rem;">Your tracking number was sent to you by WhatsApp or email when your shipment was confirmed.</p>
+      <form id="trackForm">
+        <div class="track-input-row">
+          <input type="text" id="trackingInput" placeholder="e.g. PHZ-2024-123456" autocomplete="off">
+          <button type="submit">Track now</button>
+        </div>
+        <p style="font-size:.75rem;color:var(--muted);margin-top:8px;text-align:center;">Try demo: PHZ123456 or PHZ789012</p>
+      </form>
+
+      <div class="track-result" id="trackResult">
+        <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:18px;background:var(--off);border-radius:10px;margin-bottom:20px;">
+          <div><span style="font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:3px;">Tracking ID</span><strong id="resultId" style="font-family:'Syne',sans-serif;font-size:.95rem;"></strong></div>
+          <div><span style="font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:3px;">Status</span><strong id="resultStatus" style="color:var(--red);font-family:'Syne',sans-serif;font-size:.95rem;"></strong></div>
+          <div><span style="font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:3px;">Destination</span><strong id="resultDest" style="font-family:'Syne',sans-serif;font-size:.95rem;"></strong></div>
+          <div><span style="font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:3px;">ETA</span><strong id="resultEta" style="font-family:'Syne',sans-serif;font-size:.95rem;"></strong></div>
+        </div>
+
+        <div class="status-step">
+          <div class="status-icon done">&#10003;</div>
+          <div class="status-info"><h4>Package received</h4><p>Lagos Warehouse, Nigeria</p><span>Jan 15, 2024 at 10:30am</span></div>
+        </div>
+        <div class="status-step">
+          <div class="status-icon done">&#10003;</div>
+          <div class="status-info"><h4>Customs cleared</h4><p>Export documentation complete</p><span>Jan 16, 2024 at 2:45pm</span></div>
+        </div>
+        <div class="status-step">
+          <div class="status-icon active-step">&#8594;</div>
+          <div class="status-info"><h4>In transit</h4><p>Departed Nigeria, en route to destination</p><span>Jan 17, 2024 at 8:00am</span></div>
+        </div>
+        <div class="status-step">
+          <div class="status-icon pending">&#9679;</div>
+          <div class="status-info"><h4>Arrival at destination</h4><p>Expected at destination hub</p><span>Estimated: Jan 20, 2024</span></div>
+        </div>
+        <div class="status-step">
+          <div class="status-icon pending">&#9679;</div>
+          <div class="status-info"><h4>Out for delivery</h4><p>Final delivery to recipient</p><span>Estimated: Jan 21, 2024</span></div>
+        </div>
+
+        <div style="margin-top:24px;text-align:center;">
+          <a href="contact.html" class="btn btn-outline-ink">Need help? Contact support</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO -->
+<section class="section-pad bg-white">
+  <div class="container">
+    <span class="eyebrow">Good to know</span>
+    <h2 style="margin-bottom:40px;">About your<br>tracking number</h2>
+    <div class="grid-3">
+      <div class="card reveal">
+        <h3>Where to find it</h3>
+        <p>Your tracking number is in the confirmation message we sent to your WhatsApp or email when your shipment was booked.</p>
+      </div>
+      <div class="card reveal">
+        <h3>When it activates</h3>
+        <p>Tracking becomes live within a few hours of pickup. If your number is not showing results yet, check back after 24 hours.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Cannot find your number?</h3>
+        <p>Send us your full name and shipping date on WhatsApp and we will locate your shipment for you within minutes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="container">
+    <h2>Shipment not showing up?</h2>
+    <p>Send us a message and we will find it for you.</p>
+    <a href="https://wa.me/2348000000000" class="btn btn-red">Chat on WhatsApp</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo">Phiezek <span>Logistic Services</span></a>
+        <p class="desc">Shipping Nigerian goods to the world since day one.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="track.html">Track shipment</a></li>
+          <li><a href="contact.html">Get a quote</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>15 Warehouse Road, Ikeja, Lagos</p>
+        <p>+234 800 000 0000</p>
+        <p>hello@phiezek.com</p>
+        <a href="https://wa.me/2348000000000" class="whatsapp-btn" style="margin-top:14px;">Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>2024 Phiezek Logistic Services. All rights reserved.</p></div>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
