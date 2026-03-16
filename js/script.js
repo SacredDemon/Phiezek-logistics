@@ -40,21 +40,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Track form
   const tf = document.getElementById('trackForm');
-  if (tf) {
-    tf.addEventListener('submit', e => {
-      e.preventDefault();
-      const val = document.getElementById('trackingInput').value.trim();
-      if (val.length < 3) { alert('Please enter a valid tracking number.'); return; }
-      document.getElementById('resultId').textContent = val.toUpperCase();
-      document.getElementById('resultStatus').textContent = 'In Transit';
-      document.getElementById('resultDest').textContent = 'London, UK';
-      document.getElementById('resultEta').textContent = '3 days';
-      const result = document.getElementById('trackResult');
-      result.classList.add('active');
-      result.scrollIntoView({ behavior: 'smooth' });
-    });
-  }
+if (tf) {
+  tf.addEventListener('submit', e => {
+    e.preventDefault();
+    const val = document.getElementById('trackingInput').value.trim();
+    const carrier = document.getElementById('carrierSelect').value;
+    if (val.length < 3) { alert('Please enter a valid tracking number.'); return; }
 
+    const carrierUrls = {
+      dhl: 'https://www.dhl.com/ng-en/home/tracking.html?tracking-id=' + val,
+      fedex: 'https://www.fedex.com/fedextrack/?trknbr=' + val,
+      emirates: 'https://www.skycargo.com/english/track-and-trace.aspx?awb=' + val,
+      ups: 'https://www.ups.com/track?tracknum=' + val
+    };
+
+    const whatsappNumber = '+2348034133924'; // replace with real number
+    const message = 'Hi Phiezek, I want to track my shipment. My tracking number is ' + val;
+    const whatsappUrl = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message);
+
+    document.getElementById('resultId').textContent = val;
+    document.getElementById('carrierLink').href = carrierUrls[carrier];
+    document.getElementById('whatsappLink').href = whatsappUrl;
+
+    const result = document.getElementById('trackResult');
+    result.style.display = 'block';
+    result.scrollIntoView({ behavior: 'smooth' });
+  });
+}
   // FAQ accordion
   document.querySelectorAll('.faq-item').forEach(item => {
     item.querySelector('.faq-q').addEventListener('click', () => {

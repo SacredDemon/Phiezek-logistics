@@ -38,12 +38,37 @@
       <h3 style="font-family:'Syne',sans-serif;color:var(--ink);margin-bottom:6px;">Enter your tracking number</h3>
       <p style="margin-bottom:24px;font-size:.85rem;">Your tracking number was sent to you by WhatsApp or email when your shipment was confirmed.</p>
       <form id="trackForm">
+        <div class="fg" style="margin-bottom:14px;">
+          <label>Select your carrier</label>
+          <select id="carrierSelect">
+            <option value="dhl">DHL Express</option>
+            <option value="fedex">FedEx</option>
+            <option value="emirates">Emirates Cargo</option>
+            <option value="ups">UPS</option>
+          </select>
+        </div>
         <div class="track-input-row">
-          <input type="text" id="trackingInput" placeholder="e.g. PHZ-2024-123456" autocomplete="off">
+          <input type="text" id="trackingInput" placeholder="Enter your tracking number" autocomplete="off">
           <button type="submit">Track now</button>
         </div>
-        <p style="font-size:.75rem;color:var(--muted);margin-top:8px;text-align:center;">Try demo: PHZ123456 or PHZ789012</p>
       </form>
+
+      <div class="track-result" id="trackResult" style="margin-top:28px;display:none;">
+        <p style="font-size:.85rem;color:var(--muted);margin-bottom:20px;">
+          Your tracking number is <strong id="resultId" style="color:var(--ink);"></strong>. Choose how you want to track it:
+        </p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a id="carrierLink" href="#" target="_blank" class="btn btn-navy" style="text-align:center;">
+            Track on carrier website
+          </a>
+          <a id="whatsappLink" href="#" target="_blank" class="btn" style="background:#25D366;color:white;text-align:center;">
+            Send tracking number to Phiezek on WhatsApp
+          </a>
+        </div>
+        <p style="font-size:.78rem;color:var(--muted);margin-top:16px;text-align:center;">
+          Not sure which carrier? Send it to us on WhatsApp and we will look it up for you.
+        </p>
+      </div>
 
       <div class="track-result" id="trackResult">
         <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:18px;background:var(--off);border-radius:10px;margin-bottom:20px;">
@@ -108,7 +133,7 @@
   <div class="container">
     <h2>Shipment not showing up?</h2>
     <p>Send us a message and we will find it for you.</p>
-    <a href="https://wa.me/2348000000000" class="btn btn-red">Chat on WhatsApp</a>
+    <a href="https://wa.me/2349027513181" class="btn btn-red">Chat on WhatsApp</a>
   </div>
 </div>
 
@@ -132,9 +157,9 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <p>15 Warehouse Road, Ikeja, Lagos</p>
-        <p>+234 800 000 0000</p>
-        <p>hello@phiezek.com</p>
-        <a href="https://wa.me/2348000000000" class="whatsapp-btn" style="margin-top:14px;">Chat on WhatsApp</a>
+        <p>+234 803 413 3924</p>
+        <p>phieziklogisticservices@gmail.com</p>
+        <a href="https://wa.me/2349027513181" class="whatsapp-btn" style="margin-top:14px;">Chat on WhatsApp</a>
       </div>
     </div>
     <div class="footer-bottom"><p>2024 Phiezek Logistic Services. All rights reserved.</p></div>
